@@ -1,5 +1,5 @@
 {
-  "values": [
-    "netherspawnwithitems:load"
-  ]
+	"values":[
+		"#load:__init"
+	]
 }

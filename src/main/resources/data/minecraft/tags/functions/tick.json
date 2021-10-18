@@ -1,6 +1,5 @@
 {
-	"values":[
-		"du:main",
-		"netherspawnwithitems:tick"
-	]
+  "values": [
+    "netherspawnwithitems:tick"
+  ]
 }

@@ -1,7 +1,0 @@
-{
-    "values": [
-		"du:load",
-		"chunk_scan:load",
-		"netherspawnwithitems:load"
-	]
-}

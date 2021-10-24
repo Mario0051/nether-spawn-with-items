@@ -24,6 +24,6 @@ jobs:
       with:
         name: build-artifacts
         path: |
-          bastion/build/libs/*.jar
-          classic/build/libs/*.jar
-          monument/build/libs/*.jar
+          bastion/build/libs*/
+          classic/build/libs*/
+          monument/build/libs*/

@@ -7,3 +7,9 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+rootProject.name = 'nether-spawn-with-items'
+
+include 'bastion'
+include 'classic'
+include 'monument'

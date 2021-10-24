@@ -15,9 +15,15 @@ jobs:
     - name: Build artifacts
       run: ./gradlew build
     - name: Delete dev artifacts
-      run: find build/libs/ -name '*-dev.jar' -delete
+      run: |
+        find bastion/build/libs/ -name '*-dev.jar' -delete
+        find classic/build/libs/ -name '*-dev.jar' -delete
+        find monument/build/libs/ -name '*-dev.jar' -delete
     - name: Upload build artifacts
       uses: actions/upload-artifact@v1
       with:
         name: build-artifacts
-        path: build/libs
+        path: |
+          bastion/build/libs/
+          classic/build/libs/
+          monument/build/libs/

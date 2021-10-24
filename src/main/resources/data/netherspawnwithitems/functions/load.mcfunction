@@ -27,12 +27,14 @@ execute if score $math.in_0 nswi_data matches 14 run scoreboard players add @e[t
 execute as @e[tag=height] store result entity @s Pos[1] double 1 run scoreboard players get @s nswi_data
 replaceitem entity @a weapon.offhand minecraft:bread 5
 recipe give @a minecraft:bread
-replaceitem entity @a hotbar.1 minecraft:iron_pickaxe{Damage:16}
+replaceitem entity @a hotbar.0 minecraft:wooden_axe{Damage:10}
+recipe give @a minecraft:wooden_axe
+replaceitem entity @a hotbar.1 minecraft:iron_pickaxe{Damage:5}
 recipe give @a minecraft:iron_pickaxe
 replaceitem entity @a hotbar.2 minecraft:iron_shovel{Damage:10}
 recipe give @a minecraft:iron_shovel
 replaceitem entity @a hotbar.3 minecraft:lava_bucket
-replaceitem entity @a hotbar.4 minecraft:oak_planks 26
+replaceitem entity @a hotbar.4 minecraft:oak_planks 22
 recipe give @a minecraft:oak_planks
 replaceitem entity @a hotbar.5 minecraft:oak_boat
 recipe give @a minecraft:oak_boat
@@ -48,12 +50,10 @@ recipe give @a minecraft:iron_ingot_from_blasting_iron_ore
 recipe give @a minecraft:iron_ingot_from_iron_block
 recipe give @a minecraft:iron_ingot_from_nuggets
 recipe give @a minecraft:iron_ingot_from_smelting_iron_ore
-replaceitem entity @a inventory.1 minecraft:gold_block 8
-recipe give @a minecraft:gold_block
-replaceitem entity @a inventory.2 minecraft:gravel 2
-replaceitem entity @a inventory.3 minecraft:magma_block
+replaceitem entity @a inventory.1 minecraft:gravel 2
+replaceitem entity @a inventory.2 minecraft:magma_block 1
 recipe give @a minecraft:magma_block
-replaceitem entity @a inventory.4 minecraft:cobblestone
+replaceitem entity @a inventory.3 minecraft:cobblestone 1
 execute as @e[tag=height] at @s run setblock ~ ~ ~ minecraft:nether_portal
 gamerule sendCommandFeedback false
 gamemode creative @a

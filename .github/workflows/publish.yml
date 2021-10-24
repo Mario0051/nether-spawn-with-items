@@ -17,6 +17,9 @@ jobs:
           java-version: 16
       - name: Build artifacts
         run: ./gradlew build
+    - name: Delete dev artifacts
+        run: |
+          find build/libs/ -name '*-dev.jar' -delete
       - name: Upload assets to GitHub
         uses: AButler/upload-release-assets@v2.0
         with:

@@ -23,4 +23,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: build-artifacts
-        files: 'bastion/build/libs/*;classic/build/libs/*;monument/build/libs/*
+        files: 'bastion/build/libs/*;classic/build/libs/*;monument/build/libs/*'

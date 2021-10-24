@@ -51,9 +51,9 @@ recipe give @a minecraft:iron_ingot_from_iron_block
 recipe give @a minecraft:iron_ingot_from_nuggets
 recipe give @a minecraft:iron_ingot_from_smelting_iron_ore
 replaceitem entity @a inventory.1 minecraft:gravel 2
-replaceitem entity @a inventory.2 minecraft:magma_block 1
+replaceitem entity @a inventory.2 minecraft:magma_block
 recipe give @a minecraft:magma_block
-replaceitem entity @a inventory.3 minecraft:cobblestone 1
+replaceitem entity @a inventory.3 minecraft:cobblestone
 execute as @e[tag=height] at @s run setblock ~ ~ ~ minecraft:nether_portal
 gamerule sendCommandFeedback false
 gamemode creative @a

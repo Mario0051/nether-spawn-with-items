@@ -19,9 +19,6 @@ jobs:
         find bastion/build/libs/ -name '*-dev.jar' -delete
         find classic/build/libs/ -name '*-dev.jar' -delete
         find monument/build/libs/ -name '*-dev.jar' -delete
-    - name: Move artifacts
-      run: |
-        mv bastion/build/libs
     - name: Upload build artifacts
       uses: actions/upload-artifact@v2
       with:

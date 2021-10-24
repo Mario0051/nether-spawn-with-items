@@ -4,8 +4,9 @@ setblock -29999999 0 1601 minecraft:green_shulker_box{LootTable:"netherspawnwith
 execute store result block -29999999 0 1601 LootTableSeed long 1 run seed
 setblock -29999999 0 1601 minecraft:bedrock destroy
 tag @e[type=minecraft:item,nbt={Item:{tag:{BlockEntityTag:{Items:[{tag:{nswi_data:1b}}]}}}},tag=!data] add data
-execute as @e[tag=data] run data
+execute as @e[tag=data] at @s run data
 execute as @e[tag=data] store result score $math.out_0 nswi_data run data get entity @s Item.tag.BlockEntityTag.Items[0].tag.AttributeModifiers[0].Amount 200000
+execute as @a[tag=data] run function netherspawnwithitems:spawn_shift
 execute as @a[tag=first] at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Tags:["height"],DisabledSlots:4144959,Invulnerable:1b}
 execute as @e[tag=height] run function netherspawnwithitems:rotate
 scoreboard players operation @e[tag=height] nswi_data = $math.out_0 nswi_data
@@ -58,5 +59,3 @@ gamerule sendCommandFeedback false
 gamemode creative @a
 gamerule sendCommandFeedback true
 execute at @e[tag=height] run tp @a ~ ~ ~
-execute as @e[tag=height] at @s unless entity @p[distance=0] run setblock ~ ~ ~ minecraft:air
-execute as @e[tag=height] at @s unless entity @p[distance=0] unless block ~ ~ ~ minecraft:nether_portal run kill @s
